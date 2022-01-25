@@ -5,7 +5,7 @@ let ser = document.getElementById('ser');
 let wen = document.getElementById('wen');
 let taj = document.getElementById('taj');
 let heart = document.getElementById('heart');
-let x=2;
+let qwe = 0;
 
 lan.addEventListener('click', function(){
     main.src='lanzarotte.jpg';
@@ -22,16 +22,20 @@ wen.addEventListener('click', function(){
 taj.addEventListener('click', function(){
     main.src='tajlandia.jpg';
 });
-heart.addEventListener('click', function(){
-    if(x%2 == 0){
+
+function heart_change(){
+    if(qwe%2==0){
         heart.src = "icon-on.png"
     }
     else{
         heart.src = "icon-off.png"
     }
-    x++;
-});
+    qwe++;
+}
 
+heart.addEventListener('click', function(){
+    heart_change();
+});
 // if(qwe%2==0){
 //     heart.addEventListener('click', function(){
 //         heart.src='icon-on.png';
